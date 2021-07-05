@@ -10,7 +10,12 @@
 	<link href="https://fonts.googleapis.com/css2?family=Yomogi&display=swap" rel="stylesheet">
 </head>
 <body>
-	<div class="">
+	<div class="min-h-screen flex justify-center items-center bg-gray-900 fixed w-full z-50" id="loader">
+		<div class="text-xl font-bree text-white">Personal Website | Avis Alvian
+			<img src="img/Ellipsis-1.3s-200px.gif" class="w-20 mx-auto">
+		</div>
+	</div>
+	<div class="main-content opacity-50 transition duration-1000 ease-in-out">
 		<div class="w-full">
 			<div class="h-10 bg-white flex items-center justify-between pl-3 dark:bg-gray-900">
 				<div class="text-xl font-bree dark:text-white">Personal Website | Avis Alvian</div>
@@ -131,7 +136,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	
 
 	<!-- Tentang saya -->
 
@@ -168,6 +173,7 @@
 								</svg> Telegram</a>
 							</div>
 						</div>
+						</div>
 		</div>
 	</div>
 
@@ -193,6 +199,12 @@
 	</script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 	<script type="text/javascript">
+		$(document).ready(function() {
+		    setTimeout(function(){
+		        $('#loader').hide();
+		        $('.main-content').addClass('opacity-100');
+		    }, 2000);
+		});
 		$('#btn-menu-1').click(function() {
 			$('html, body').animate({
 				scrollTop: $("#menu-1").offset().top
