@@ -1,15 +1,9 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: [],
-  darkMode: 'class', // or 'media' or 'class'
+  content: ["./index.html"],
+  darkMode: "class",
   theme: {
-    extend: {},
-    fontFamily: {
-      lobster: ['Lobster'],
-      bree: ['Bree Serif'],
-    },
-  },
-  variants: {
     extend: {},
   },
   plugins: [],
-}
+};
