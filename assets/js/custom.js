@@ -2,7 +2,7 @@ $(document).ready(function () {
   setTimeout(function () {
     $("#loader").hide();
     $(".main-content").addClass("opacity-100");
-  }, 1000);
+  }, 500);
   $("#sendme").on("click", function () {
     var message = $("#message").val();
     window.open(
@@ -32,19 +32,3 @@ $(document).ready(function () {
     return false;
   });
 });
-$(window)
-  .scroll(function () {
-    var scrollDistance = $(window).scrollTop();
-    scrollDistance = scrollDistance + 100;
-
-    // Assign active class to nav links while scolling
-    $("section").each(function (i) {
-      if ($(this).position().top <= scrollDistance) {
-        $("nav ul li a.border-b-2.border-amber-400").removeClass(
-          "border-b-2 border-amber-400"
-        );
-        $("nav ul li a").eq(i).addClass("border-b-2 border-amber-400");
-      }
-    });
-  })
-  .scroll();
